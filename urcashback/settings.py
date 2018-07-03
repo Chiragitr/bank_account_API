@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bank_account',
     'django_extensions',
+    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
