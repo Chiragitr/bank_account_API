@@ -16,15 +16,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.conf.urls import url, include
-from rest_framework import routers
-from bank_account import views
 
-router = routers.DefaultRouter()
-router.register(r'bank', views.BankViewSet)
 
 urlpatterns = [
 	
 	url(r'^admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+	url(r'^bankac/', include('bank_account.urls')),
+	url(r'^accounts/', include('accounts.urls')),
+    
 ]
